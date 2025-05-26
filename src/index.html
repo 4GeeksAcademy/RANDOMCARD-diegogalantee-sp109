@@ -1,35 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Card Dealer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-success d-flex flex-column justify-content-center align-items-center min-vh-100">
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <div class="card shadow-lg rounded-4 text-center position-relative" id="card" style="width: 10rem; height: 14rem;">
+    <div class="position-absolute top-0 start-0 m-2 fs-4" id="top-suit">♥</div>
+    <div class="d-flex justify-content-center align-items-center h-100 fs-1 fw-bold" id="card-value">3</div>
+    <div class="position-absolute bottom-0 end-0 m-2 fs-4 rotated-suit" id="bottom-suit">♥</div>
+  </div>
+
+  <button id="randomBtn" class="btn btn-light mt-4">Generar Carta</button>
+  <div class="mt-4 text-white">
+    <div class="d-flex gap-3 align-items-end">
+      <div>
+        <label for="cardWidth" class="form-label">Ancho</label>
+        <input type="text" id="cardWidth" class="form-control" placeholder="Ingrese ancho" style="width: 150px;">
       </div>
+      <div>
+        <label for="cardHeight" class="form-label">Alto</label>
+        <input type="text" id="cardHeight" class="form-control" placeholder="Ingrese altura" style="width: 150px;">
+      </div>
+      <button class="btn btn-warning h-50" id="resizeBtn">Aplicar Cambios</button>
     </div>
-
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
 </html>

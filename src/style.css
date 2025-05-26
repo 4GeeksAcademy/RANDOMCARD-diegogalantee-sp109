@@ -3,3 +3,14 @@
 body{
     background: white;
 }
+.rotated-suit {
+  transform: rotate(180deg);
+}
+
+.heart, .diamond {
+  color: red;
+}
+
+.spade, .club {
+  color: black;
+}
